@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <title>Smart Alarm</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+
+<body onload="startTime()">
+    <div class="container">
+        <div class="digital_clock" id="digital_clock"></div>
+        <form action="/" method="get">
+            <input name="date_time" class="alarm-input" type="datetime-local">
+            <input name="task" class="alarm-input2" type="text" placeholder="Enter task here">
+            <button class="alarm-button" type="submit">Set Alarm</button>
+        </form>
+        <br>
+        <br>
+        <div class="basic_div">
+            <div class="list_items">
+            {% for item in date_time_info %}
+                <div class="time_list">{{ item }}</div>
+            {% endfor %}
+            </div>
+            <div class="list_items">
+            {% for item in task_info %}
+                <div class="task_list">{{ item }}<button name="delete" class="delete-button">Delete</button></div>
+            {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

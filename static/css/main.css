@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Wallpoet&display=swap');
+
+:root {
+    --main-bg-grey: #222222;
+    --main-pink: #E31B6D;
+    --main-white: #f8f8f8;
+    --main-blue: #04C2C9;
+}
+
+* {
+    box-sizing: border-box;
+    transition: all ease-in-out 200ms;
+}
+
+body,html {
+    text-align: center;
+    color: var(--main-white);
+    font-family: 'Open Sans', sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--main-bg-grey);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    margin: 5px;
+}
+
+.title {
+    font-size: 5em;
+}
+
+.digital_clock {
+    font-family: 'VT323', monospace;
+    margin-top: 15vh;
+    font-size: calc(6vh + 8vw);
+    color: var(--main-white);
+}
+
+.alarm-input {
+    height: calc(2vh + 2vw);
+    width: calc(5vh + 16vw);
+    font-size: calc(1vh + 1.2vw);
+    border: 5px solid var(--main-blue);
+    border-radius: 10px;
+    font-family: 'VT323', monospace;
+    text-align: center;
+}
+
+.alarm-input2 {
+    height: calc(2vh + 2vw);
+    width: calc(5vh + 14vw);
+    font-size: calc(1vh + 1.2vw);
+    border: 5px solid var(--main-blue);
+    border-radius: 10px;
+    font-family: 'VT323', monospace;
+    text-align: center;
+}
+
+.alarm-button {
+    height: calc(2vh + 2vw);
+    width: calc(5vh + 12vw);
+    font-size: calc(1vh + 1.5vw);
+    border-radius: 10px;
+    border: 5px solid var(--main-pink);
+    background-color: var(--main-bg-grey);
+    color: var(--main-white);
+    font-family: 'VT323', monospace;
+}
+
+.alarm-button:focus,
+.alarm-button:hover {
+    background-color: var(--main-pink);
+}
+
+.basic_div {
+    font-size: calc(1vh + 1.4vw);
+    color: var(--main-white);
+    font-family: 'VT323', monospace;
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    margin-left: 34vw;
+    margin-right: 50vw;
+}
+
+.time_list {
+    flex: 1;
+}
+
+.task_list {
+    flex: 1;
+    overflow: hidden;
+}
+
+.list_items {
+    margin-right: 20px;
+}
+
+.delete-button {
+    margin-left: 10px;
+    height: 1.8em;
+    width: 6em;
+    font-family: 'VT323', monospace;
+    margin-right: 0;
+    padding: 0;
+    border-radius: 5px;
+    border: 1px solid var(--main-blue);
+    background-color: var(--main-bg-grey);
+    color: var(--main-white);
+    float: right;
+}
+
+.delete-button:focus,
+.delete-button:hover {
+    background-color: var(--main-blue);
+}
